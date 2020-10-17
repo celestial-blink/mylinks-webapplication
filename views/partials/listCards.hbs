@@ -1,0 +1,11 @@
+{{#each part.data}}
+    <div class="wrapper-list-card">
+        <h2>{{this.title}}</h2>
+        <input type="checkbox" {{#if this.privacity}}checked{{/if}} name="privacity" value="yes" id="{{this._id}}">
+        <label for="{{this._id}}"></label>
+    </div>
+{{/each}}
+
+{{#unless part.data}}
+    <h2>no se encontro resultados</h2>
+{{/unless}}

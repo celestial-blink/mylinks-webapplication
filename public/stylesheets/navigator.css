@@ -1,0 +1,193 @@
+div.wrapper-navigator{
+    background-color: black;
+    display: flex;
+    height: 80px;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+    padding-left: 20px;
+    min-width: 360px;
+    z-index: 1000;
+}
+div.wrapper-navigator>span.items-nav{
+    display: flex;
+    box-sizing: border-box;
+}
+div.wrapper-navigator>a.btn-omenu{
+    width: 80px;
+    height: 80px;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+    text-decoration: none;
+    color: white;
+    display: none;
+}
+div.wrapper-navigator>a{
+    text-decoration: none;
+}
+div.wrapper-navigator>a>h1{
+    padding: 0;
+    margin:0;
+    color:white;
+}
+div.wrapper-navigator>span.items-nav>nav{
+    box-sizing: border-box;
+    padding: 10px;
+    width: 500px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+div.wrapper-navigator>span.items-nav>nav>a{
+    color: white;
+    text-decoration: none;
+    font-size: 22px;
+    transition: all .4s;
+}
+div.wrapper-navigator>span.items-nav>nav>a:hover{
+    font-size: 24px;
+    color:#e9a8ff;
+}
+div.wrapper-navigator>span.items-nav>span{
+    display: flex;
+    height: 80px;
+    position: relative;
+    width: 100px;
+    justify-content: center;
+    align-items: center;
+
+}
+div.wrapper-navigator>span.items-nav>span>a{
+    color:white;
+    text-decoration: none;
+    font-size: 60px;
+}
+div.wrapper-navigator>span.items-nav>span>nav.options-profile{
+    position: absolute;
+    top: 100%;
+    background-color: rgb(0 0 0 / 70%);
+    padding: 10px;
+    box-sizing: border-box;
+    width: 160px;
+    right: 0;
+    transform: translateY(-200px);
+    z-index: -1;
+    transition: transform .4s;
+}
+div.wrapper-navigator>span.items-nav>span>nav.options-profile:target{
+    transform: translateY(0);
+    z-index: 20;
+}
+div.wrapper-navigator>span.items-nav>span>nav.options-profile>a{
+    text-decoration: none;
+    color:white;
+}
+div.wrapper-navigator>span.items-nav>span>nav.options-profile>a>h2{
+    margin: 0;
+    text-decoration: none;
+    font-size: 20px;
+}
+div.wrapper-navigator>span.items-nav>span>nav.options-profile>a>p{
+    margin: 0 0 30px 0;
+    text-decoration: none;
+    font-size: 12px;
+}
+div.wrapper-navigator>span.items-nav>span>nav.options-profile>a:last-child{
+    padding-top: 20px;
+    display: inline-block;
+    border-width: 3px 0 0 0;
+    border-color: white;
+    border-style: solid;
+    width: 100%;
+    font-size: 20px;
+    text-align: center;
+}
+div.wrapper-navigator>span.items-nav>span>nav.options-profile>a:last-child>p{
+    display: inline;
+    font-size: 20px;
+
+}
+
+@media (max-width:990px){
+    div.wrapper-navigator>a>h1{
+        font-size: 25px;
+        text-align: center;
+    }
+    div.wrapper-navigator>span.items-nav{
+        width: 500px;
+    }
+    div.wrapper-navigator>span.items-nav>nav>a{
+        font-size: 16px;
+    }
+}
+
+@media (max-width:770px){
+    div.wrapper-navigator{
+        position: fixed;
+        justify-content: space-between;
+    }
+    div.wrapper-navigator>a.btn-omenu{
+        display: flex;
+    }
+    div.wrapper-navigator>span.items-nav>span>nav.options-profile{
+        z-index: 1;
+        transform: translateY(0);
+    }
+    div.wrapper-navigator>span.items-nav>nav{
+        position: relative;
+        overflow: hidden;
+    }
+    div.wrapper-navigator>span.items-nav>nav>a{
+        font-size: 28px;
+        padding:15px;
+    }
+    div.wrapper-navigator>span.items-nav>nav>a:hover{
+        font-size: 30px;
+    }
+    div.wrapper-navigator>span.items-nav{
+        position: fixed;
+        top: 80px;
+        width: 100%;
+        height: 560px;
+        background-color: black;
+        flex-direction: column;
+        left: 0;
+        justify-content: space-evenly;
+        transform: translateX(-100%);
+        transition: all .4s;
+    }
+    div.wrapper-navigator>span.items-nav:target{
+        transform: translateX(0%);
+    }
+    div.wrapper-navigator>span.items-nav>nav{
+        flex-direction: column;
+        width: 100%;
+        height: 40%;
+    }
+    div.wrapper-navigator>span.items-nav>span {
+        width: 100%;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: center;
+    }
+    div.wrapper-navigator>span.items-nav>span>nav.options-profile {
+        position: relative;
+        top: 0;
+        background: transparent;
+    }
+    div.wrapper-navigator>span.items-nav>span>nav.options-profile>a:last-child {
+        text-align: start;
+    }
+    div.wrapper-navigator>span.items-nav>span>nav.options-profile>a>p {
+        margin-bottom: 15px;
+    }
+}
+
+@media (max-width:400px){
+    div.wrapper-navigator>a>h1{
+        font-size: 20px;
+        margin-left: 0;
+    }
+}

@@ -1,0 +1,10 @@
+div.wrapper-contact{
+    display: block;
+    width: 100%;
+    background: black;
+    color: white;
+    box-sizing: border-box;
+    padding: 40px;
+    font-size: 20px;
+    border-radius: 10px;
+}

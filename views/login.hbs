@@ -1,0 +1,37 @@
+<head>
+    <link rel="stylesheet" href="/stylesheets/form.css">
+    <link rel="stylesheet" href="/stylesheets/login.css">
+</head>
+{{> message}}
+<div class="wrapper-login">
+    <div class="content">
+        <form class="form" act="login">
+            <h2>Inicie session</h2>
+            <input type="text" name="user" placeholder="INGRESE USUARIO">
+            <span class="password">
+                <input type="password" name="password" placeholder="INGRESE CONTRASEÑA">
+                <a href="#">
+                    <i class="fa fa-eye" aria-hidden="true"></i>
+                </a>
+            </span>
+            <input type="submit" value="Ingresar">
+            <a href="#registration">Registrarme</a>
+        </form>
+        <form class="form" id="registration" act="registration">
+            <h2>Registrate</h2>
+            <input type="text" name="user" placeholder="INGRESE USUARIO">
+            <span class="password">
+                <input type="password" name="password" placeholder="INGRESE CONTRASEÑA">
+                <a href="#"><i class="fa fa-eye" aria-hidden="true"></i></a>
+            </span>
+            <span class="password">
+                <input type="password" name="repeat" placeholder="CONFIRME CONTRASEÑA">
+                <a href="#"><i class="fa fa-eye" aria-hidden="true"></i></a>
+            </span>
+            <input type="text" name="fullname" placeholder="INGRESE NOMBRE COMPLETO">
+            <input type="submit" value="Ingresar">
+            <a href="#back">Atrás</a>
+        </form>
+    </div>
+</div>
+<script src="/javascripts/login.js"></script>

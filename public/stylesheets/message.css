@@ -1,0 +1,27 @@
+div.wrapper-message{
+    width: 350px;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    left: -300%;
+    top: 100px;
+    z-index: 1001;
+    transition: all 2s;
+}
+div.wrapper-message>.content{
+    width: 90%;
+    box-sizing: content-box;
+    padding: 10px;
+}
+.good{
+    background-color: #15c415;
+}
+.error{
+    background-color: #e01212;
+}
+div.wrapper-message>.content>h3{
+    text-align: center;
+    color: white;
+}

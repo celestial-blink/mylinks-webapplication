@@ -1,0 +1,11 @@
+{{#each part.data}}
+    <div class="wrapper-images">
+        <img src="{{this.image}}" key="{{this._id}}">
+        <a href="#" target="_blank">
+            <i class="fa fa-trash" aria-hidden="true"></i>
+        </a>
+    </div>
+{{/each}}
+{{#unless part.data}}
+<h2>no se encontró imagenes</h2>
+{{/unless}}

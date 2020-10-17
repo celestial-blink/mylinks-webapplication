@@ -1,0 +1,110 @@
+div.wrapper-profile{
+    background: rgb(0 0 0 / 70%);
+    display: flex;
+    box-sizing: border-box;
+    height: 600px;
+    font-family: Verdana;
+    border-radius: 10px;
+    min-width: 360px;
+    width: 100%;
+}
+div.wrapper-profile>nav{
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    justify-content: space-evenly;
+    border-width: 0 5px 0 0;
+    border-color: rgb(255 255 255 / 50%);
+    border-style: solid;
+}
+div.wrapper-profile>nav>a{
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    font-size: 20px;
+    transition: all .3s;
+}
+div.wrapper-profile>nav>a:hover{
+    font-size: 22px;
+    color:#e9a8ff;
+}
+div.wrapper-profile>div{
+    display: inline-block;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px 20px;
+}
+div.wrapper-profile>div>span{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+div.wrapper-profile>div>span>h1{
+    color:white;
+    margin: 0;
+}
+div.wrapper-profile>div>span>h3{
+    color:white;
+    margin: 0;
+}
+div.wrapper-profile>div>span>form>input[type="file"]{
+    display: none;
+}
+div.wrapper-profile>div>span>form>label{
+    display: inline-block;
+    color: white;
+    padding: 5px;
+    border-radius: 10px;
+    border: 3px solid #d148ff;
+}
+div.wrapper-profile>div>div{
+    overflow-x: hidden;
+    overflow-y: scroll;
+    width: 100%;
+    height: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+div.wrapper-profile>div>div::-webkit-scrollbar{
+    background-color: white;
+    border-radius: 10px;
+}
+div.wrapper-profile>div>div::-webkit-scrollbar-thumb{
+    background-color: violet;
+    border-radius: 10px;
+}
+
+@media (max-width:770px){
+    div.wrapper-profile{
+        flex-direction: column;
+        min-height: 640px;
+    }
+    div.wrapper-profile>nav{
+        flex-direction: row;
+        width: 100%;
+        border-width: 0;
+        box-sizing: border-box;
+        padding: 20px;
+    }
+    div.wrapper-profile>div{
+        height: 85%;
+    }
+    div.wrapper-profile>div>div{
+        height: 96%;
+    }
+    div.wrapper-profile>nav>a{
+        font-size: 15px;
+    }
+    div.wrapper-profile>div>span>h1{
+        font-size: 22px;
+    }
+    div.wrapper-profile>div>span>h3{
+        font-size: 18px;
+    }
+    div.wrapper-profile>div>span>label{
+        font-size: 14px;
+    }
+}

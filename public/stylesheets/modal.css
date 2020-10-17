@@ -1,0 +1,46 @@
+div.wrapper-modal{
+    width: 100%;
+    height: 100%;
+    background-color: #00000099;
+    left: 0;
+    top: -100%;
+    position: fixed;
+    box-sizing: border-box;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    transition: all .4s;
+}
+div.wrapper-modal:target{
+    top: 0;
+}
+div.wrapper-modal>a{
+    text-decoration: none;
+    color: white;
+    font-size: 50px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin: 20px 30px;
+    transition: all .2s;
+}
+div.wrapper-modal>a:hover{
+    font-size: 52px;
+}
+div.wrapper-modal>.content{
+    position: relative;
+}
+div.wrapper-modal>.content>img{
+    height: 550px;
+    width: 550px;
+    object-fit: cover;
+}
+
+@media (max-width:770px){
+    div.wrapper-modal>.content>img{
+        height: 350px;
+        width: 350px;
+    }
+}

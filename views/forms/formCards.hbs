@@ -1,0 +1,39 @@
+<head>
+    <link rel="stylesheet" href="/stylesheets/form.css">
+    <link rel="stylesheet" href="/stylesheets/form-card.css">
+    <link rel="stylesheet" href="/stylesheets/images.css">
+</head>
+<div class="wrapper-form">
+    <form class="form" id="form-card" act="insert">
+        <h2>Cards</h2>
+        <input type="text" name="title" placeholder="INGRESE TÍTULO" required>
+        <textarea name="description" placeholder="escriba una descripcion" required></textarea>
+        <span>
+            <select id="type-link">
+                <option value="mega">mega</option>
+                <option value="mediafire">mediafire</option>
+                <option value="others">otros</option>
+            </select>
+            <input type="url" id="link" placeholder="limite 2 links">
+            <input type="button" value="agregar">
+        </span>
+        <ul id="all-links"></ul>
+        <span class="image-privacity">
+            <span>
+                <a href="#image" class="image"><i class="fa fa-picture-o" aria-hidden="true"></i> fondo</a>
+                <i class="fa fa-check" aria-hidden="true"></i>
+            </span>
+            <span>
+                <label for="privacity">Público</label>
+                <input type="checkbox" name="privacity" value="true" id="privacity">
+            </span>
+        </span>
+        <div id="image">
+            <h1>mis imagens</h1>
+            <a href="#"><i class="fa fa-times" aria-hidden="true"></i></a>
+            <div></div>
+        </div>
+        <input type="submit" value="Guardar">
+    </form>
+</div>
+<script src="/javascripts/formCards.js"></script>

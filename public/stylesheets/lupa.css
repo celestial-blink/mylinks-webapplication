@@ -1,0 +1,53 @@
+.l_wrapper{
+    position: fixed;
+    top:100px;
+    right: 100px;
+    z-index: 10;
+}
+.l_formulario>input[type="search"]{
+    height: 60px;
+    width: 60px;
+    border:10px solid #b13cff;
+    border-radius: 70px;
+    box-sizing: border-box;
+    color:transparent;
+    text-align: center;
+    padding: 0px 15px;
+    outline: none;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    transition:all .5s;
+    font-size: 18px;
+}
+.l_formulario>input[type="search"]::placeholder{
+    opacity: 0;
+    font-size: 14px;
+}
+.l_formulario>input[type="search"]::-webkit-search-cancel-button{
+    opacity: 0;
+    transition:all .5s;
+}
+.l_formulario>span{
+    height: 50px;
+    width: 10px;
+    border-radius: 10px;
+    background-color: #b13cff;
+    position: absolute;
+    transform: rotate(-45deg);
+    bottom: -50%;
+}
+.l_formulario>input[type="search"]:focus{
+    width: 300px;
+    color: #b13cff;
+}
+.l_formulario>input[type="search"]:focus::-webkit-search-cancel-button{
+    opacity: 1;
+}
+.l_formulario>input[type="search"]:focus::placeholder{
+    opacity: 1;
+}
+
+@media (max-width:770px){
+    .l_wrapper{
+        right: 20px;
+    }
+}

@@ -1,0 +1,37 @@
+{{#unless part.data}}
+    <h2>no se encontró resultados</h2>
+{{/unless}}
+{{#each part.data}}
+    <div class="wrapper-cards" key={{this._id}} private={{this.privacity}}>
+    <img src="{{this.image}}" alt="not image found">
+    <h1>{{this.title}}</h1>
+    <p class="description">{{this.description}}</p>
+    <span>
+        {{#each this.links}}
+            <a href="{{urls this "1"}}" data-text="{{this}}" target="_blank">{{urls this "0"}}</a>
+        {{/each}}
+    </span>
+    {{#if ../part.edit}}
+        <span class="operation" id="operation-cards">
+            <a href="#modal" data="{{json this}}"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
+            <a href="#delete" data="{{this._id}}" ><i class="fa fa-trash-o" aria-hidden="true"></i></a>
+        </span>
+    {{/if}}
+    <span>
+        <span>
+            <h6>{{propertyUser this.user}}</h6>
+            <p>{{split this.date "T" "0"}}</p>
+        </span>
+        <span>
+            <span class="like">
+                <p>{{this.like}}</p>
+                <a href="#like"><i class="fa fa-thumbs-up" aria-hidden="true"></i></a>
+            </span>
+            <span class="dislike">
+                <p>{{this.dislike}}</p>
+                <a href="#dislike"><i class="fa fa-thumbs-down" aria-hidden="true"></i></a>
+            </span>
+        </span>
+    </span>
+</div>
+{{/each}}
