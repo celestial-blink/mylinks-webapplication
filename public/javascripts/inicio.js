@@ -69,7 +69,7 @@ const getNavigator=()=>{
             getDataForContainer({title:e.target.parentElement.getAttribute("href")}).then(res=>{
                 setContainer({content:res});
                 closeLoader();
-                // loadScripts(e.target.parentElement.getAttribute("href"));
+                loadScripts(e.target.parentElement.getAttribute("href"));
             }).catch(err=>{
                 closeLoader();
                 content=err;
@@ -109,6 +109,14 @@ const getComponent=()=>{
     }
 };
 
+const loadInicio=()=>{
+    getDataForContainer({title:'last'}).then(res=>{
+        setContainer({content:res});
+    }).catch(err=>{
+        setContainer({content:err});
+    });
+};
+
 
 const loadScripts=(scpt)=>{
     switch(scpt){
@@ -136,3 +144,4 @@ const loadScripts=(scpt)=>{
 getComponent();
 setNavigator();
 initializeIndex();
+loadInicio();

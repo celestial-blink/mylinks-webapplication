@@ -12,7 +12,6 @@ const sendDataPagination=async(object)=>{
 const initializePagination=()=>{
     let position=document.querySelector("#title-position");
     let btnpages=document.querySelectorAll("#content-pagination>a");
-    console.log("holis");
     btnpages.forEach(element=>{
         element.onclick=(e)=>{
             openLoader();

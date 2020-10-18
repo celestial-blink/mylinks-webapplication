@@ -81,6 +81,7 @@ const getDataImages=async()=>{
 
 const createElemetsImages=(object)=>{
     let container=document.querySelector("div#image>div");
+     container.innerHTML="";
     let div=document.createElement('div');
     div.classList.add("wrapper-images");
     let img=new Image();
@@ -131,6 +132,7 @@ const modalImagen=()=>{
     btnImage.onclick=(e)=>{
         e.preventDefault();
         contentImages.style.left="0%";
+        getImages();
     }
 }
 const initializeCards=()=>{
@@ -165,5 +167,4 @@ const initializeCards=()=>{
     createLinks();
     deleteLinks();
     modalImagen();
-    getImages();
 };

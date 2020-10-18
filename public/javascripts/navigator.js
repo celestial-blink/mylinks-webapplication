@@ -7,7 +7,6 @@ const inicializeNavigator=()=>{
     btnone.onclick=(e)=>{
         let wn=window.location.href.split("#")[1];
         btnone.href=( wn==undefined || wn=="")?"#items-nav":"#";
-        console.log(btone);
     }
 
     btntwo.onclick=(e)=>{
