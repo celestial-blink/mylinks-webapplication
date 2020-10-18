@@ -149,13 +149,17 @@ const initializeCards=()=>{
                     links.innerHTML="";
                     form.reset();
                     iconCheck.style.display="none";
-                    getDataForContainer('data',position.getAttribute('data')).then(ress=>{
-                        setContainer({content:ress});
-                        loadScripts(e.target.getAttribute('id'));
-                        closeLoader();
-                    }).catch(errr=>{
-                        closeLoader();
-                    });
+                    let ps=position.getAttribute('data');
+                    if ((ps=="profile" || ps=="contact") || ps==null) {
+                    }else{
+                        getDataForContainer({title:ps}).then(ress=>{
+                            setContainer({content:ress});
+                            loadScripts(e.target.getAttribute('id'));
+                            closeLoader();
+                        }).catch(errr=>{
+                            closeLoader();
+                        });
+                    }
                 }, 2000);
             }else{
                 showMessage({message:res.message,type:"err"});
