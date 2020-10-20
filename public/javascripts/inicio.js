@@ -112,6 +112,8 @@ const getComponent=()=>{
 const loadInicio=()=>{
     getDataForContainer({title:'last'}).then(res=>{
         setContainer({content:res});
+        valuesLike();
+        setValuesDisLikes();
     }).catch(err=>{
         setContainer({content:err});
     });
@@ -121,11 +123,15 @@ const loadInicio=()=>{
 const loadScripts=(scpt)=>{
     switch(scpt){
         case "last":
+            setValuesDisLikes();
+            valuesLike();
             break;
         case "all":
+            valuesLike();
             initializePagination();
             break;
         case "mycards":
+            valuesLike();
             editCard();
             deleteCard();
             initializePagination();

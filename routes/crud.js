@@ -2,6 +2,8 @@ const {Router}=require('express');
 const {insertCards,updateCards,deleteCards,updatePrivacity}=require('../crud/CRUDcards');
 const {insertImage,deleteImage}=require('../crud/CRUDimages');
 const {insertUser,deleteUser,updateUser}=require('../crud/CRUDusers');
+const {insertLikes,updateLikes}=require('../crud/CRUDlikes');
+
 const multer=require('multer');
 
 const path=require('path')
@@ -81,6 +83,11 @@ const insertDocument=async(object)=>{
         case "form-image":
             let image=await insertImage(object);
             return {state:true,message:"guardado con éxito"};
+
+        case "form-likes":
+            let likes=await insertLikes(object);
+            return {state:true, message:"guardado con éxito",data:likes};
+
         default:
             return {state:false,message:"no se encontró formulario"};
     }
@@ -124,7 +131,11 @@ const actionDocumentPersonalized=async(object)=>{
     switch(object.personalized){
         case "update-privacity":
             let updtPrivacity=await updatePrivacity(object);
-            return {state:true,message:"actualizados"}
+            return {state:true,message:"actualizados"};
+        case "update-likes-value":
+            let updtLkesVal=await updateLikes(object);
+            return {state:true, message:"likes actualizados"};
+            
         default:
             return {state:false,message:"no se encontró acción personalizada"}
     }

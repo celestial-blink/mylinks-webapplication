@@ -4,7 +4,6 @@ var router = express.Router();
 const {getTopCards,getCards,getCardsForUser,getAllCardsForUser}=require('../crud/CRUDcards');
 const {getImageForUser}=require('../crud/CRUDimages');
 
-
 /* GET home page. */
 router.get('/', function(req, res, next) {
   res.render('index', { title: 'Celestial blink' });

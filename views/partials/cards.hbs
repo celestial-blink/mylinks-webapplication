@@ -6,7 +6,7 @@
     <img src="{{this.image}}" alt="not image found">
     <h1>{{this.title}}</h1>
     <p class="description">{{this.description}}</p>
-    <span>
+    <span id="content-links-downloads" data-text="descargas">
         {{#each this.links}}
             <a href="{{urls this "1"}}" data-text="{{this}}" target="_blank">{{urls this "0"}}</a>
         {{/each}}
@@ -17,19 +17,21 @@
             <a href="#delete" data="{{this._id}}" ><i class="fa fa-trash-o" aria-hidden="true"></i></a>
         </span>
     {{/if}}
-    <span>
+    <span class="content-info">
         <span>
             <h6>{{propertyUser this.user}}</h6>
             <p>{{split this.date "T" "0"}}</p>
         </span>
-        <span>
+        <span class="dis-likes" key="">
             <span class="like">
-                <p>{{this.like}}</p>
-                <a href="#like"><i class="fa fa-thumbs-up" aria-hidden="true"></i></a>
+                <p>0</p>
+                <input type="radio" id="{{likes this._id "like"}}" name="likes" value="1">
+                <label for="{{likes this._id "like"}}"><i class="fa fa-thumbs-up" aria-hidden="true"></i></label>
             </span>
             <span class="dislike">
-                <p>{{this.dislike}}</p>
-                <a href="#dislike"><i class="fa fa-thumbs-down" aria-hidden="true"></i></a>
+                <p>0</p>
+                <input type="radio" id="{{likes this._id "dislike"}}" name="likes" value="0">
+                <label for="{{likes this._id "dislike"}}"><i class="fa fa-thumbs-down" aria-hidden="true"></i></label>
             </span>
         </span>
     </span>

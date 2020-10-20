@@ -29,6 +29,9 @@ hbs.registerHelper('split',(text,expression,key)=>{
 hbs.registerHelper('propertyUser',(data)=>{
   return data[0].user;
 });
+hbs.registerHelper('likes',(value,word)=>{
+  return `${value}-${word}`;
+});
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
