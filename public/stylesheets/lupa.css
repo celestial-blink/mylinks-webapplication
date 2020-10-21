@@ -7,7 +7,7 @@
 .l_formulario>input[type="search"]{
     height: 60px;
     width: 60px;
-    border:10px solid #b13cff;
+    border:10px solid #ee0979;
     border-radius: 70px;
     box-sizing: border-box;
     color:transparent;
@@ -30,7 +30,7 @@
     height: 50px;
     width: 10px;
     border-radius: 10px;
-    background-color: #b13cff;
+    background: linear-gradient(180deg, #ee0979 -30%, #ff6a00);
     position: absolute;
     transform: rotate(-45deg);
     bottom: -50%;

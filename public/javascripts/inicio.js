@@ -1,7 +1,10 @@
 const getDataForContainer=async(object)=>{
     let params=new URLSearchParams();
     params.append('title',object.title);
-    params.append('id',sessionStorage.getItem('id'))
+    if(object.search!=undefined){
+        params.append('search',object.search);;
+    }
+    params.append('id',sessionStorage.getItem('id'));
     let data=await fetch('/inicio',{method:'post',body:params});
     let html=await data.text();
     return html;
@@ -119,6 +122,29 @@ const loadInicio=()=>{
     });
 };
 
+const searchCards=()=>{
+    let search=document.querySelector(".l_formulario>[type='search']");
+    let form=document.querySelector(".l_formulario");
+    let position=document.querySelector("#title-position");
+    form.onsubmit=(e)=>{
+        e.preventDefault();
+    }
+    search.onsearch=(e)=>{
+        e.preventDefault();
+            if(e.target.value.trim()!=""){
+                position.textContent="TODOS";
+                position.setAttribute('data','all');
+                getDataForContainer({title:'all',
+                search:e.target.value
+            }).then(res=>{
+                setContainer({content:res});
+            }).catch(err=>{
+                setContainer({content:err});
+            });
+            }
+    }
+}
+
 
 const loadScripts=(scpt)=>{
     switch(scpt){
@@ -129,12 +155,14 @@ const loadScripts=(scpt)=>{
         case "all":
             valuesLike();
             initializePagination();
+            setValuesDisLikes();
             break;
         case "mycards":
             valuesLike();
             editCard();
             deleteCard();
             initializePagination();
+            setValuesDisLikes();
             break;
         case "contact":
             break;
@@ -147,6 +175,7 @@ const loadScripts=(scpt)=>{
     }
 }
 
+searchCards();
 getComponent();
 setNavigator();
 initializeIndex();

@@ -109,6 +109,8 @@ const setValuesDisLikes=()=>{
                             element.children[4].children[1].children[0].children[1].checked=true;
                         }else if(res.data.value==0){
                             element.children[4].children[1].children[1].children[1].checked=true;
+                        }else{
+                            console.log("take");
                         }
                     }
                 }else{

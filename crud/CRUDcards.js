@@ -60,8 +60,8 @@ const getCards=async(object)=>{
         await Cards.find({$and:[
             {privacity:true},
             {$or:[
-                {title:new RegExp(`^${data.search}`)},
-                {title:new RegExp(`${data.search}$`)}
+                {title:new RegExp(`^${object.search}`)},
+                {title:new RegExp(`${object.search}$`)}
             ]}
         ]}).populate('user').skip(start).limit(cards);
 
