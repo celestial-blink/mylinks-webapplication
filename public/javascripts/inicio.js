@@ -168,6 +168,7 @@ const loadScripts=(scpt)=>{
             break;
         case "profile":
             initializeProfile();
+            startProfile();
             break;
         default:
             console.log("no se encontró indice");

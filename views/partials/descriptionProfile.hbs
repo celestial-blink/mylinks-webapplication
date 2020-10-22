@@ -1,0 +1,37 @@
+<head>
+    <link rel="stylesheet" href="/stylesheets/descriptionProfile.css">
+</head>
+<div class="wrapper-description">
+    <span>
+        <h3>Nombre de usuario</h3>
+        <p>{{part.user.user}}</p>
+    </span>
+    <span>
+        <h3>Nombre completo</h3>
+        <p>{{part.user.fullname}}</p>
+    </span>
+    <span>
+        <h3>Total de cartas</h3>
+        <p>{{part.cards}}</p>
+    </span>
+    <span>
+        <h3>Públicos</h3>
+        <p>{{part.publics}}</p>
+    </span>
+    <span>
+        <h3>Privados</h3>
+        <p>{{part.privates}}</p>
+    </span>
+    <span>
+        <h3>imagenes</h3>
+        <p>{{part.images}}</p>
+    </span>
+    <span>
+        <h3>fecha de creacion</h3>
+        <p>{{split part.user.date "T" "0"}}</p>
+    </span>
+    <span>
+        <a href="#eliminar"  id="delete-user" key="{{part.user._id}}">Eliminar cuenta</a>
+        <p>al eliminar su cuenta se eliminará todas sus cartas</p>
+    </span>
+</div>

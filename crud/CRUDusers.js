@@ -1,7 +1,7 @@
-let {getConection}=require('../conection/mongoConnection');
 let User=require('../models/users');
 let Cars=require('../models/cards');
 let Images=require('../models/images');
+let Likes=require('../models/likes');
 
 const insertUser=async(object)=>{
     let insert=new User({
@@ -28,16 +28,18 @@ const updateUser=async(object)=>{
 
 const deleteUser=async(object)=>{
     let deleteCards=await Cars.deleteMany({
-        user:object._id
+        user:object.id
     });
     let deleteImages=await Images.deleteMany({
-        user:object._id
+        user:object.id
+    });
+    let deleteLikes=await Likes.deleteMany({
+        user:object.id
     });
     let deleteUser=await User.deleteOne({
-        _id:object._id
+        _id:object.id
     });
-
-    return {cards:deleteCards,users:deleteUser,images:deleteImages};
+    return {likes:deleteLikes,cards:deleteCards,users:deleteUser,images:deleteImages};
 };
 
 const getUserLogin=async(object)=>{

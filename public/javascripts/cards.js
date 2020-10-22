@@ -120,7 +120,7 @@ const setValuesDisLikes=()=>{
                 console.log(res.message);
             }
         }).catch(err=>{
-            console.log(err,"errorito");
+            console.log(err);
         });
     });
 }

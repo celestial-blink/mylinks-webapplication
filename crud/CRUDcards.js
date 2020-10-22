@@ -118,6 +118,23 @@ const getAllCardsForUser=async(object)=>{
     return all;
 }
 
+const getCardsPublicPrivate=async(object)=>{
+    let public=await Cards.find(
+        { $and:[
+            {user:object.id},
+            {privacity:true}
+        ]}
+    );
+    let private=await Cards.find(
+        { $and:[
+            {user:object.id},
+            {privacity:false}
+        ]}
+    );
+
+    return {public:public,private:private};
+}
+
 const updatePrivacity=async(object)=>{
     let update=await Cards.updateOne(
         {_id:object.id},
@@ -128,4 +145,4 @@ const updatePrivacity=async(object)=>{
     return update;
 }
 
-module.exports = {getCards,getCardsForUser,insertCards,updateCards,updateLikes,deleteCards,getTopCards,updatePrivacity,getAllCardsForUser}
+module.exports = {getCardsPublicPrivate,getCards,getCardsForUser,insertCards,updateCards,updateLikes,deleteCards,getTopCards,updatePrivacity,getAllCardsForUser}

@@ -40,7 +40,17 @@ const sendDataCrudProfile=async(object)=>{
                 body:deleteImage
             });
             return await sendDeleteImage.json();
-        
+        case "delete-profile":
+            let deleteProfile=new FormData();
+            deleteProfile.append('id',object.id);
+            deleteProfile.append('action','delete');
+            deleteProfile.append('form','form-user');
+            let sendDeleteProfile=await fetch("/crud",{
+                method:"POST",
+                body:deleteProfile
+            });
+            return await sendDeleteProfile.json();
+
         default:
             return {state:false,message:"no se encontro accion de profile"};            
     }
@@ -92,6 +102,39 @@ const showImageModal=()=>{
             window.location.href=window.location.href.split("#")[0]+"#modal"
         }
     });
+};
+
+const startProfile=()=>{
+    let container=document.querySelector("#profile-content>div");
+    sendDataProfile({
+        title:"myprofile"
+    }).then(res=>{
+        container.innerHTML=res;
+        deleteProfile();
+    }).catch(err=>{
+        container.innerHTML=err;
+    });
+}
+
+const deleteProfile=()=>{
+    let btnDelete=document.querySelector('#delete-user');
+    btnDelete.onclick=(e)=>{
+        e.preventDefault();
+        if (confirm("se eliminará su cuenta y todo su contenido dentro de la aplicaccion")){
+            sendDataCrudProfile({
+                type:"delete-profile",
+                id:e.target.getAttribute('key')
+            }).then(res=>{
+                showMessage({message:`${res.message}`,type:"ok"});
+                setTimeout(()=>{
+                    sessionStorage.clear();
+                    window.location.reload();
+                },3000);
+            }).catch(err=>{
+                showMessage({message:err,type:"err"});
+            });
+        }
+    }
 }
 
 const initializeProfile=()=>{
@@ -113,6 +156,9 @@ const initializeProfile=()=>{
             }else if(e.target.getAttribute('href')=="privacity"){
                 showComponents[1].style.display="inline-block";
                 showComponents[2].style.display="none";
+            }else if(e.target.getAttribute('href')=="myprofile"){
+                showComponents[1].style.display="none";
+                showComponents[2].style.display="none";
             }
             sendDataProfile({title:e.target.getAttribute('href')}).then(res=>{
                 container.innerHTML=res.trim();
@@ -127,6 +173,9 @@ const initializeProfile=()=>{
                 };
                 if(e.target.getAttribute('href')=="privacity"){
                     initializePrivacity();
+                }
+                if(e.target.getAttribute('href'=="myprofile")){
+                    deleteProfile();
                 }
             }).catch(err=>{
                 container.innerHTML=err;

@@ -118,7 +118,7 @@ const deleteDocument=async(object)=>{
             return {state:true,message:"eliminado"};
         case "form-user":
             let user=await deleteUser(object);
-            return {state:true,message:"eliminado"};
+            return {state:true,message:"eliminado", data:user};
         case "form-image":
             let image=await deleteImage(object);
             return {state:true,message:"eliminado",img:true};

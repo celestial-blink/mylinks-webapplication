@@ -1,8 +1,9 @@
 var express = require('express');
 var router = express.Router();
 
-const {getTopCards,getCards,getCardsForUser,getAllCardsForUser}=require('../crud/CRUDcards');
+const {getTopCards,getCards,getCardsForUser,getAllCardsForUser,getCardsPublicPrivate}=require('../crud/CRUDcards');
 const {getImageForUser}=require('../crud/CRUDimages');
+const { getDataUser } = require('../crud/CRUDusers');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
@@ -50,6 +51,12 @@ const selectContent=async(object)=>{
     case "privacity":
       let privacity=await getAllCardsForUser(object)
       return {state:true,partial:"component", privacity:"yes",data:privacity,total:privacity.total};
+    case "myprofile":
+      let countCards=await getAllCardsForUser(object);
+      let dateUser=await getDataUser(object);
+      let countImages=await getImageForUser(object);
+      let prv=await getCardsPublicPrivate(object);
+      return {state:true,partial:"component", myprofile:"yes", user:dateUser, cards:countCards.length, images:countImages.length,privates:prv.private.length,publics:prv.public.length};
 
     default :
       return {state:false,message:"no se encontro dato"};
