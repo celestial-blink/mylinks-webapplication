@@ -43,4 +43,7 @@ div.wrapper-modal>.content>img{
         height: 350px;
         width: 350px;
     }
+    div.wrapper-modal>a{
+        margin: 5px 20px;
+    }
 }

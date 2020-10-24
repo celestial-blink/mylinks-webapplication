@@ -86,7 +86,7 @@
     max-height: 100px;
     z-index: 2;
     border-radius: 10px;
-    color: #9c27b0;
+    color: #ff0101;
     font-size: 16px;
     outline: none;
     box-sizing: border-box;
@@ -127,5 +127,5 @@
 }
 .form>span>select{
     border-radius: 10px;
-    color:#9C27B0;
+    color:#ff0101;
 }

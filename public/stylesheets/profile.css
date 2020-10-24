@@ -26,7 +26,7 @@ div.wrapper-profile>nav>a{
 }
 div.wrapper-profile>nav>a:hover{
     font-size: 22px;
-    color:#e9a8ff;
+    color:#ff6d6d;
 }
 div.wrapper-profile>div{
     display: inline-block;
@@ -57,6 +57,7 @@ div.wrapper-profile>div>span>form>label{
     padding: 5px;
     border-radius: 10px;
     border: 3px solid #e40b0b;
+    margin: 0 20px;
 }
 div.wrapper-profile>div>div{
     overflow-x: hidden;

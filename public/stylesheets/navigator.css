@@ -54,7 +54,7 @@ div.wrapper-navigator>span.items-nav>nav>a{
 }
 div.wrapper-navigator>span.items-nav>nav>a:hover{
     font-size: 24px;
-    color:#e9a8ff;
+    color:#ff6d6d;
 }
 div.wrapper-navigator>span.items-nav>span{
     display: flex;

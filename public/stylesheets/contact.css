@@ -6,4 +6,10 @@ div.wrapper-contact{
     padding: 40px;
     font-size: 20px;
     border-radius: 10px;
+    text-align: center;
+}
+@media(max-width: 500px){
+    div.wrapper-contact>p>b{
+        font-size: 16px;
+    }
 }

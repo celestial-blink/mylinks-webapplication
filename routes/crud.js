@@ -27,7 +27,7 @@ router.post("/",upload.any("image"),(req,res)=>{
         ...req.body,
         ...{links:(req.body.links==undefined)?[]:req.body.links.split(",")},
         ...{_id:(req.body._id=="null")?null:req.body._id},
-        ...{image:(req.files.length==0)?"defaultImage.jpg":req.files[0].filename},
+        ...{image:(req.files.length==0)?"/images/defaultImage.jpg":req.files[0].filename},
         ...{privacity:(req.body.privacity==undefined)?false:true}
     };
     console.log(obj,"me llego esto");

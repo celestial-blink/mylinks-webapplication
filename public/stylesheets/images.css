@@ -10,6 +10,7 @@ div.wrapper-images>img{
     height: 100%;
     width: 100%;
     object-fit: cover;
+    cursor: pointer;
 }
 div.wrapper-images>a{
     color: white;
