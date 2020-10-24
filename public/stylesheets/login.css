@@ -3,12 +3,11 @@ div.wrapper-login{
     height: 100%;
     min-height: 100vh;
     width: 100%;
-    background: #FC466B;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #3F5EFB, #FC466B);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(45deg, #3F5EFB, #FC466B); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: linear-gradient(84deg, #d2010117, #00000029);
     position: relative;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
 }
 
 div.wrapper-login>.content{
@@ -43,4 +42,18 @@ div.wrapper-login>.content>form:last-child>a{
 .form>.password>input{
     height: 50px;
     font-size: 18px;
+}
+div.wrapper-login>span{
+    margin-bottom: 10px;
+    display: block;
+    position: relative;
+    height: 70px;
+}
+div.wrapper-login>span>*{
+    color: white;
+    margin: 0;
+}
+div.wrapper-login>span>h3{
+    text-align: right;
+    font-size: 14px;
 }

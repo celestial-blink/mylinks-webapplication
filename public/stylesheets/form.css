@@ -6,7 +6,7 @@
 .form{
     height: 100%;
     width: 100%;
-    background-color: rgb(0 0 0 / 60%);
+    background-color: rgb(0 0 0);
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -30,7 +30,7 @@
     display: flex;
 }
 .form>.password>a{
-    color:#a100f5;
+    color:#d20101;
     text-decoration: none;
     position: absolute;
     top: 50%;
@@ -45,7 +45,7 @@
     position: absolute;
     width: 420px;
     height: 500px;
-    background: #a100f5;
+    background: linear-gradient(-110deg, #d20101, #000000);
     border-radius: 50%;
     left: -35px;
     top: -120px;
@@ -60,16 +60,16 @@
     border-width: 0;
     text-align: center;
     font-size: 18px;
-    color: #9C27B0;
+    color: #ff0101;
     z-index: 2;
 }
 .form input[type="submit"]{
-    color: #f395ff;
+    color: #ff5959;
     background: linear-gradient(180deg, #db70ff 70%, #9b1eb0);
     background: transparent;
     box-sizing: border-box;
     border-radius: 1;
-    border: 4px solid #f395ff;
+    border: 4px solid #ff5959;
 }
 .form input[type="submit"]:hover{
     font-size: 20px;

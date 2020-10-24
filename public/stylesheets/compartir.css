@@ -6,7 +6,7 @@
 }
 .mshare{
     display: inline-block;
-    background-color:rgb(255 255 255 / 85%);
+    background-color:rgb(255 255 255 / 70%);
     border-radius: 50px;
     height: calc(52px*var(--i));
     width: 50px;
@@ -25,7 +25,7 @@
     display: inline-block;
     height: 50px;
     width: 50px;
-    color:#ff6a00;
+    color:#d20101;
     font-size: 40px;
     text-align: center;
     box-sizing: border-box;
@@ -43,7 +43,7 @@
     height: 50px;
     width: 50px;
     background-color: #fff;
-    color: #ff6a00;
+    color: #d20101;
     font-size: 40px;
     border-radius: 50%;
     text-align: center;

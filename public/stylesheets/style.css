@@ -5,8 +5,7 @@ body {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  background: linear-gradient(to left, #00c6ff, #0072ff);
- /*   background: linear-gradient(to right, #3f5efb, #fc466a);W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: linear-gradient(84deg, #d20101, #000000);
 }
 
 img.wallpaper{
@@ -55,7 +54,7 @@ a.agregate{
     width: 100px;
     color: white;
     text-decoration: none;
-    background: linear-gradient(-122deg, #ee0979, #ff6a00);
+    background: linear-gradient(180deg, #d20101, #000000);
     box-sizing: border-box;
     padding: 15px;
     border-radius: 10px;
@@ -65,13 +64,13 @@ a.agregate{
 }
 @media (max-width:770px){
   a.agregate{
-    top: 70px;
+    top: 82px;
   }
   div.title-position{
     top: 80px;
   }
   div.wrapper-content-load{
-    top:70px;
+    top:100px;
     margin: 0;
     padding: 0;
   }

@@ -1,6 +1,6 @@
 div.wrapper-cards{
     position: relative;
-    background:linear-gradient(-122deg, #ee0979, #ff6a00);
+    background:#da0505;
     height: 300px;
     width: 230px;
     z-index: 1;
@@ -97,7 +97,7 @@ div.wrapper-cards>span:last-child>span:last-child>span>input[type="radio"]{
     display: none;
 }
 div.wrapper-cards>span:last-child>span:last-child>span>input[type="radio"]:checked+label{
-    color: deeppink;
+    color: #da0505;
 }
 div.wrapper-cards>span:last-child>span:last-child>span>label{
     text-decoration: none;
@@ -122,7 +122,7 @@ span#content-links-downloads{
     border-radius: 10px;
     border: 4px solid white;
     position: relative;
-    border-image: linear-gradient(-122deg, #ee0979, #ff6a00);
+    border-image: linear-gradient(45deg, #d20101, #000000);
     border-image-slice: 1;
     background-color: rgb(0 0 0/30%);
 }
@@ -133,7 +133,7 @@ span#content-links-downloads::before{
     top: -4px;
     font-size: 12px;
     color: white;
-    background: linear-gradient(-122deg, #ee0979, #ff6a00);
+    background: linear-gradient(45deg, #d20101, #000000);
     border-radius: 5px;
     padding: 0 5px;
 

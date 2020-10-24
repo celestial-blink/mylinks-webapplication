@@ -7,7 +7,7 @@
 .l_formulario>input[type="search"]{
     height: 60px;
     width: 60px;
-    border:10px solid #ee0979;
+    border:10px solid #da0505;
     border-radius: 70px;
     box-sizing: border-box;
     color:transparent;
@@ -30,14 +30,14 @@
     height: 50px;
     width: 10px;
     border-radius: 10px;
-    background: linear-gradient(180deg, #ee0979 -30%, #ff6a00);
+    background: linear-gradient(180deg, #da0505 -30%, #4a0000);
     position: absolute;
     transform: rotate(-45deg);
     bottom: -50%;
 }
 .l_formulario>input[type="search"]:focus{
     width: 300px;
-    color: #b13cff;
+    color: #da0505;
 }
 .l_formulario>input[type="search"]:focus::-webkit-search-cancel-button{
     opacity: 1;
