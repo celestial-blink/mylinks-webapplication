@@ -5,7 +5,7 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 let hbs=require('hbs');
 // let conf=require('dotenv');
-conf.config();
+// conf.config();
 let {getConection}=require('./conection/mongoConnection');
 getConection().then(res=>{
   console.log("conectado");
