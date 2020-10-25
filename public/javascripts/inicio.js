@@ -82,6 +82,7 @@ const getNavigator=()=>{
 }
 const initializeIndex=()=>{
     getNavigator();
+    openLoader();
 }
 const createElementFcard=()=>{
     let content=document.querySelector("#modal>.content");
@@ -114,6 +115,7 @@ const getComponent=()=>{
 
 const loadInicio=()=>{
     getDataForContainer({title:'last'}).then(res=>{
+        closeLoader();
         setContainer({content:res});
         valuesLike();
         setValuesDisLikes();

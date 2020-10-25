@@ -24,6 +24,7 @@ const initializeLogin=()=>{
     forms.forEach(element=>{
         element.onsubmit=(e)=>{
             e.preventDefault();
+            openLoader();
             sendData(e.target).then(res=>{
                 if(res.state){
                     showMessage({message:res.message,type:"ok"});
@@ -43,6 +44,7 @@ const initializeLogin=()=>{
             }).catch(err=>{
                 showMessage({message:err,type:"err"});
                 console.log(err);
+                closeLoader();
             })
         }
     })

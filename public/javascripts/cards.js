@@ -102,7 +102,6 @@ const setValuesDisLikes=()=>{
             if(res.state){
                 let posti=document.querySelector("#title-position");
                 if(posti.getAttribute('data')=="mycards"){
-                    console.log(element.children[5].children[1].children[1].children[0]);
                     element.children[5].children[1].children[1].children[0].textContent=res.dislikes;
                     element.children[5].children[1].children[0].children[0].textContent=res.likes;
                 }else{
