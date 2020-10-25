@@ -146,6 +146,7 @@ const initializeProfile=()=>{
     btns.forEach(element=>{
         element.onclick=(e)=>{
             e.preventDefault();
+            container.innerHTML="<h2>Cargando espere...</h2>";
             container.parentElement.setAttribute('data',e.target.getAttribute('href'));
             if(e.target.getAttribute('href')=="editprofile"){
                 showComponents[1].style.display="none";

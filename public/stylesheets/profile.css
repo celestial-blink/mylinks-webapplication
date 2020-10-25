@@ -69,6 +69,9 @@ div.wrapper-profile>div>div{
     align-items: center;
     flex-wrap: wrap;
 }
+div.wrapper-profile>div>div>h2{
+    color: white;
+}
 div.wrapper-profile>div>div::-webkit-scrollbar{
     background-color: white;
     border-radius: 10px;
