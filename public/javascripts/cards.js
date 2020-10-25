@@ -100,6 +100,7 @@ const setValuesDisLikes=()=>{
     idCards.forEach(element=>{
         getDataDisLikes({card:element.getAttribute('key')}).then(res=>{
             if(res.state){
+                console.log(element.children[4].children[1].children[1].children[0].textContent);
                 element.children[4].children[1].children[0].children[0].textContent=res.likes;
                 element.children[4].children[1].children[1].children[0].textContent=res.dislikes;
                 if (res.data!=undefined){
