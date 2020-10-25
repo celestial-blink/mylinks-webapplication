@@ -149,8 +149,8 @@ const searchCards=()=>{
 const loadScripts=(scpt)=>{
     switch(scpt){
         case "last":
-            setValuesDisLikes();
             valuesLike();
+            setValuesDisLikes();
             break;
         case "all":
             valuesLike();
@@ -161,8 +161,8 @@ const loadScripts=(scpt)=>{
             valuesLike();
             editCard();
             deleteCard();
-            initializePagination();
             setValuesDisLikes();
+            initializePagination();
             break;
         case "contact":
             break;

@@ -100,9 +100,15 @@ const setValuesDisLikes=()=>{
     idCards.forEach(element=>{
         getDataDisLikes({card:element.getAttribute('key')}).then(res=>{
             if(res.state){
-                console.log(element.children[4].children[1].children[1].children[0],element.children[4].children[1].children[1].children[0]);
-                element.children[4].children[1].children[0].children[0].textContent=res.likes;
-                element.children[4].children[1].children[1].children[0].textContent=res.dislikes;
+                let posti=document.querySelector("#title-position");
+                if(posti.getAttribute('data')=="mycards"){
+                    console.log(element.children[5].children[1].children[1].children[0]);
+                    element.children[5].children[1].children[1].children[0].textContent=res.dislikes;
+                    element.children[5].children[1].children[0].children[0].textContent=res.likes;
+                }else{
+                    element.children[4].children[1].children[1].children[0].textContent=res.dislikes;
+                    element.children[4].children[1].children[0].children[0].textContent=res.likes;
+                }
                 if (res.data!=undefined){
                     element.children[4].children[1].setAttribute('key',res.data._id);
                     if(res.data!=null){
