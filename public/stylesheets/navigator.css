@@ -156,7 +156,7 @@ div.wrapper-navigator>span.items-nav>span>nav.options-profile>a:last-child>p{
         position: fixed;
         top: 80px;
         width: 100%;
-        height: 560px;
+        height: calc(100vh - 80px);
         background-color: black;
         flex-direction: column;
         left: 0;

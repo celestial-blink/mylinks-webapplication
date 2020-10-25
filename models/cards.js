@@ -31,7 +31,7 @@ const cardsSchema = new Schema({
         },
     image:{
             type:String,
-            default:"defaultImage.jpg"
+            default:"/images/defaultImage.jpg"
         },
     privacity:{
         type:Boolean,
