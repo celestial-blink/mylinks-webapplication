@@ -34,6 +34,13 @@ hbs.registerHelper('propertyUser',(data)=>{
 hbs.registerHelper('likes',(value,word)=>{
   return `${value}-${word}`;
 });
+hbs.registerHelper('setPosition',(arr,value)=>{
+  if (arr==value){
+    return "position";
+  }else{
+    return "no";
+  }
+});
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');

@@ -32,10 +32,10 @@ const selectContent=async(object)=>{
       return {state:true, last:"yes",data:last};
     case "all":
       let all=await getCards(object);
-      return {state:true, all:"yes", data:all.data,pages:all.pages,total:all.total};
+      return {state:true, all:"yes", data:all.data,pages:all.pages,total:all.total,position:all.page};
     case "mycards":
       let forUser=await getCardsForUser(object);
-      return {state:true,edit:"mycards", mycards:"yes",data:forUser.data,pages:forUser.pages,total:forUser.total};
+      return {state:true,edit:"mycards", mycards:"yes",data:forUser.data,pages:forUser.pages,total:forUser.total, position:forUser.page};
     case "contact":
       return {state:true, contact:"yes"};
     case "profile":

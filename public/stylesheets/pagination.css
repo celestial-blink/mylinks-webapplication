@@ -30,6 +30,9 @@ div.wrapper-pagination>nav>a:hover{
     font-size: 28px;
     color:violet;
 }
+a.position{
+    background-color: #da0505;
+}
 @media (max-width:770px){
     div.wrapper-pagination{
         margin-top: 100px;

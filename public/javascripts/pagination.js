@@ -9,6 +9,7 @@ const sendDataPagination=async(object)=>{
     });
     return await send.text();
 }
+
 const initializePagination=()=>{
     let position=document.querySelector("#title-position");
     let btnpages=document.querySelectorAll("#content-pagination>a");

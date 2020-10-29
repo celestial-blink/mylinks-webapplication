@@ -65,7 +65,7 @@ const getCards=async(object)=>{
             ]}
         ]}).populate('user').skip(start).limit(cards);
 
-    return {pages:pagesArray,total:all.length,data:all};
+    return {pages:pagesArray,total:all.length,data:all,page:page};
 };
 
 const getTopCards=async()=>{
@@ -108,7 +108,7 @@ const getCardsForUser=async(object)=>{
         user:object.id
     }).skip(start).limit(cards).populate('user');
 
-    return {pages:pagesArray, data:get, total:get.length};
+    return {pages:pagesArray, data:get, total:get.length, page:page};
 }
 
 const getAllCardsForUser=async(object)=>{

@@ -4,7 +4,7 @@
 <div class="wrapper-pagination">
     <nav id="content-pagination">
         {{#each part.pages}}
-            <a href="{{this}}">{{this}}</a>
+            <a href="{{this}}" class="{{setPosition ../part.position this}}">{{this}}</a>
         {{/each}}
     </nav>
 </div>
