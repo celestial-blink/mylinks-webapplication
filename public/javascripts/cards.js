@@ -109,12 +109,19 @@ const setValuesDisLikes=()=>{
                     element.children[4].children[1].children[0].children[0].textContent=res.likes;
                 }
                 if (res.data!=undefined){
-                    element.children[4].children[1].setAttribute('key',res.data._id);
                     if(res.data!=null){
                         if(res.data.value==1){
-                            element.children[4].children[1].children[0].children[1].checked=true;
+                            if(posti.getAttribute('data')=="mycards"){
+                                element.children[5].children[1].children[0].children[1].checked=true;
+                            }else{
+                                element.children[4].children[1].children[0].children[1].checked=true;
+                            }
                         }else if(res.data.value==0){
-                            element.children[4].children[1].children[1].children[1].checked=true;
+                            if(posti.getAttribute('data')=="mycards"){
+                                element.children[5].children[1].children[1].children[1].checked=true;
+                            }else{
+                                element.children[4].children[1].children[1].children[1].checked=true;
+                            }
                         }else{
                             console.log("take");
                         }
